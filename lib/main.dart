@@ -33,25 +33,14 @@ class _MyFirstAppState extends State<MyFirstApp> {
           centerTitle: true,
         ),
         body: Center(
-          child: Container(
-            padding: EdgeInsets.all(16),
-            child: _loading
-                ? Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      LinearProgressIndicator(
-                        value: _progressValue,
-                      ),
-                      Text(
-                        "${(_progressValue * 100).round()}%",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
-                      ),
-                    ],
-                  )
-                : Text(
-                    "Press button to download",
-                    style: TextStyle(color: Colors.white, fontSize: 20),
-                  ),
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              Image(
+                image: AssetImage('assets/images/image-1.jpeg'),
+              ),
+              Image.asset('assets/icons/icon.png'),
+            ],
           ),
         ),
         floatingActionButton: FloatingActionButton(
