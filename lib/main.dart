@@ -26,6 +26,7 @@ class _MyFirstAppState extends State<MyFirstApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: "EBGaramond"),
       home: Scaffold(
         backgroundColor: Colors.deepOrange[400],
         appBar: AppBar(
@@ -40,6 +41,18 @@ class _MyFirstAppState extends State<MyFirstApp> {
                 image: AssetImage('assets/images/image-1.jpeg'),
               ),
               Image.asset('assets/icons/icon.png'),
+              Positioned(
+                top: 30,
+                left: 100,
+                child: Text(
+                  'My custom font',
+                  style: TextStyle(
+                    fontSize: 30,
+                    color: Colors.amber,
+                    fontFamily: 'EBGaramond',
+                  ),
+                ),
+              ),
             ],
           ),
         ),
